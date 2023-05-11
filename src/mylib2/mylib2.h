@@ -1,0 +1,1 @@
+int sub_two_element(int a, int b);

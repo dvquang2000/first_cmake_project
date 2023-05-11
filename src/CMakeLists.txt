@@ -1,0 +1,2 @@
+add_subdirectory(mylib1)
+add_subdirectory(mylib2)
