@@ -14,6 +14,8 @@ target_link_libraries(${PROJECT_NAME}
     opencv_highgui 
     opencv_imgproc  
 )
+# target_include_directories(${PROJECT_NAME}
+#     PUBLIC img/)
 
 
 # add_subdirectory(app)

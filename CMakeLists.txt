@@ -10,4 +10,5 @@ target_link_libraries(first_tests
     sub::lib1
     sub::lib2
 )
+
 add_test(all_tests first_tests)
