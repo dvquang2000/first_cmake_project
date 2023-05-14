@@ -1,0 +1,22 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+../src/mylib1/mylib1.h
+
+../src/mylib2/mylib2.h
+
+/home/quangdv/cmake_tutorial/first_cmake_project/unit_tests.cpp
+iostream
+-
+gtest/gtest.h
+-
+mylib1.h
+-
+mylib2.h
+-
+

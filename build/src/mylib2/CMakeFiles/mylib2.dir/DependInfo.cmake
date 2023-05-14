@@ -1,14 +1,16 @@
-
-# Consider dependencies only in project.
-set(CMAKE_DEPENDS_IN_PROJECT_ONLY OFF)
-
 # The set of languages for which implicit dependencies are needed:
 set(CMAKE_DEPENDS_LANGUAGES
+  "CXX"
   )
+# The set of files for implicit dependencies of each language:
+set(CMAKE_DEPENDS_CHECK_CXX
+  "/home/quangdv/cmake_tutorial/first_cmake_project/src/mylib2/mylib2.cpp" "/home/quangdv/cmake_tutorial/first_cmake_project/build/src/mylib2/CMakeFiles/mylib2.dir/mylib2.cpp.o"
+  )
+set(CMAKE_CXX_COMPILER_ID "GNU")
 
-# The set of dependency files which are needed:
-set(CMAKE_DEPENDS_DEPENDENCY_FILES
-  "/home/qdt/test_cmake/first_project/src/mylib2/mylib2.cpp" "src/mylib2/CMakeFiles/mylib2.dir/mylib2.cpp.o" "gcc" "src/mylib2/CMakeFiles/mylib2.dir/mylib2.cpp.o.d"
+# The include file search paths:
+set(CMAKE_CXX_TARGET_INCLUDE_PATH
+  "../src/mylib2"
   )
 
 # Targets to which this target links.
