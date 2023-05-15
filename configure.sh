@@ -1,3 +1,3 @@
 #! bin/sh
 
-cd build ; cmake ..
+mkdir build; cd build ; cmake ..
