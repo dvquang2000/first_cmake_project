@@ -5,7 +5,10 @@ pipeline {
             steps {
                 sh 'echo "Building..."'
                 sh 'chmod +x build.sh'
+                sh 'echo $(pwd)'
+                sh 'echo $(ls)'
                 sh 'build.sh'
+                
                 archiveArtifacts artifacts: 'build/', fingerprint: true  
             }   
         }
