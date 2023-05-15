@@ -8,7 +8,7 @@
 
 int main() {
 
-    int a = 7;
+    int a = 20;
     int b = 8;
     std::cout<< sum_two_element(a,b) <<std::endl;
     std::cout<< sub_two_element(a,b) <<std::endl;
