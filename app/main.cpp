@@ -12,7 +12,7 @@ int main() {
     int b = 8;
     std::cout<< sum_two_element(a,b) <<std::endl;
     std::cout<< sub_two_element(a,b) <<std::endl;
-    cv::Mat img  = cv::imread("/home/quangdv/cmake_tutorial/first_cmake_project/img/test.jpg");
+    cv::Mat img  = cv::imread("/home/qdt-02/workspace/quangdv/first_cmake_project/img/test.jpg");
     cv::imshow("IMAGE", img);
     cv::waitKey(0);
     return 0;
