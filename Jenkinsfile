@@ -25,7 +25,7 @@ pipeline {
             parallel {
                 stage ("Debug") {
                     when { expression {!params.RELEASE}}
-                    step {
+                    steps {
                         script {
                             if(os.equalsIgnoreCase("macOS")) {
                             sh 'chmod +x build.sh'
