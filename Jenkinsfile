@@ -14,6 +14,7 @@ pipeline {
                     groovyScript = load "build.groovy"
                     os = groovyScript.findOS()
                     echo 'Building the application...'
+                    echo "$os"
                 }
             }
         }
