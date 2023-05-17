@@ -1,4 +1,4 @@
-#!/bin/zsh
+#!/bin/bash
 if [[ $OSTYPE == *"darwin"* ]]; then
     cd build/macOS/
     ./first_tests
