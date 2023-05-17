@@ -7,7 +7,7 @@ pipeline {
         booleanParam(name: "RELEASE", defaultValue: false)
     }
     environment {
-        OSTYPE = "abc"
+        OSTYPE = "linux-gnu"
     }
 
     stages {
