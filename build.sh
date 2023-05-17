@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # echo $OSTYPE
-if [ "$OSTYPE" == *"darwin"* ]; then
+if [[ "$OSTYPE" == *"darwin"* ]]; then
     if [ ! -d build/macOS ]; then
     mkdir build/macOS
     fi
@@ -19,7 +19,7 @@ if [ "$OSTYPE" == *"darwin"* ]; then
     cmake -B build/macOS -DCMAKE_BUILD_TYPE=$1 -DCMAKE_TOOLCHAIN_FILE=cmake/toolchain/x86-64-macOS.cmake
     cd build/macOS
     cmake --build .
-elif [ "$OSTYPE" == *"linux-gnu"* ]; then
+elif [[ "$OSTYPE" == *"linux-gnu"* ]]; then
     if [ ! -d build/Linux/aarch64 ]; then
     mkdir build/Linux/aarch64
     fi
