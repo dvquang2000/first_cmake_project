@@ -25,7 +25,7 @@ pipeline {
                         script {
                             if(os.equalsIgnoreCase("macOS")) {
                             sh 'chmod +x build.sh'
-                            sh 'sh ./build.sh Debug'
+                            sh 'sh build.sh Debug'
                             archiveArtifacts artifacts: 'build/macOS/*', fingerprint: true
                             }   else if(os.equalsIgnoreCase("Windows32")) {
                                 // Perform Windows related build task
@@ -38,7 +38,7 @@ pipeline {
                             }   else {
                                 // Perform Linux related build task
                             sh 'chmod +x build.sh'
-                            sh 'sh ./build.sh Debug'
+                            sh 'sh build.sh Debug'
                             archiveArtifacts artifacts: 'build/Linux/aarch64/*', fingerprint: true
                             }
                         }
@@ -51,7 +51,7 @@ pipeline {
                             // If operating system is macOS
                             if(os.equalsIgnoreCase("macOS")) {
                             sh 'chmod +x build.sh'
-                            sh 'sh ./build.sh Release'
+                            sh 'sh build.sh Release'
                             archiveArtifacts artifacts: 'build/macOS/*', fingerprint: true
                             }  else if(os.equalsIgnoreCase("Windows32")) {
                                 // Perform Windows-32Bit related build task
@@ -64,7 +64,7 @@ pipeline {
                             }  else {
                                 // Perform Linux related build task
                             sh 'chmod +x build.sh'
-                            sh 'sh ./build.sh Release'
+                            sh 'sh build.sh Release'
                             archiveArtifacts artifacts: 'build/Linux/aarch64/*', fingerprint: true
                             }
                         }
