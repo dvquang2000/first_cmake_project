@@ -4,7 +4,7 @@ def os
 pipeline {
     agent {
         node {
-            label   'CROSS-PLATFORM'
+            label 'master'
         }
     }
     parameters {
