@@ -1,4 +1,4 @@
-#!/bin/zsh
+#!/bin/bash
 
 # echo $OSTYPE
 if [[ $OSTYPE == *"darwin"* ]]; then
