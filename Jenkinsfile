@@ -2,11 +2,7 @@ def groovyScript
 def os
 
 pipeline {
-    agent {
-        node {
-            label 'master'
-        }
-    }
+    agent any
     parameters {
         booleanParam(name: "RELEASE", defaultValue: false)
     }
