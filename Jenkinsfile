@@ -13,7 +13,6 @@ pipeline {
     stages {
         stage("Init") {
             steps {
-                withEnv ("PATH+EXTRA=/usr/bin:/usr/sbin:/bin:/sbin")
                 script {
                     groovyScript = load "build.groovy"
                     os = groovyScript.findOS()
@@ -23,11 +22,11 @@ pipeline {
             }
         }
         stage("Build") {
-            withEnv ("PATH+EXTRA=/usr/bin:/usr/sbin:/bin:/sbin")
             parallel {
                 stage ("Debug") {
                     when { expression {!params.RELEASE}}
                     steps {
+                        withEnv(["PATH+EXTRA=/usr/bin:/usr/sbin:/bin:/sbin"])
                         script {
                             if(os.equalsIgnoreCase("macOS")) {
                             $OSTYPE = "darwin"
