@@ -26,12 +26,11 @@ pipeline {
                 stage ("Debug") {
                     when { expression {!params.RELEASE}}
                     steps {
-                        withEnv(["PATH+EXTRA=/usr/bin:/usr/sbin:/bin:/sbin"])
                         script {
                             if(os.equalsIgnoreCase("macOS")) {
                             $OSTYPE = "darwin"
                             sh 'chmod +x build.sh'
-                            sh 'sh ./build.sh Debug'
+                            sh 'source ./build.sh Debug'
                             archiveArtifacts artifacts: 'build/macOS/*', fingerprint: true
                             }   else if(os.equalsIgnoreCase("Windows32")) {
                                 // Perform Windows related build task
@@ -45,7 +44,7 @@ pipeline {
                                 // Perform Linux related build task
                             $OSTYPE = "linux-gnu"
                             sh 'chmod +x build.sh'
-                            sh 'sh ./build.sh Debug'
+                            sh 'source ./build.sh Debug'
                             archiveArtifacts artifacts: 'build/Linux/aarch64/*', fingerprint: true
                             }
                         }
@@ -54,13 +53,12 @@ pipeline {
                 stage("Release") {
                     when { expression { params.RELEASE } }
                     steps {
-                        withEnv(["PATH+EXTRA=/usr/bin:/usr/sbin:/bin:/sbin"])
                         script {
                             // If operating system is macOS
                             if(os.equalsIgnoreCase("macOS")) {
                             $OSTYPE = "darwin"
                             sh 'chmod +x build.sh'
-                            sh 'sh ./build.sh Release'
+                            sh 'source ./build.sh Release'
                             archiveArtifacts artifacts: 'build/macOS/*', fingerprint: true
                             }  else if(os.equalsIgnoreCase("Windows32")) {
                                 // Perform Windows-32Bit related build task
@@ -74,7 +72,7 @@ pipeline {
                                 // Perform Linux related build task
                             $OSTYPE = "linux-gnu"
                             sh 'chmod +x build.sh'
-                            sh 'sh ./build.sh Release'
+                            sh 'source ./build.sh Release'
                             archiveArtifacts artifacts: 'build/Linux/aarch64/*', fingerprint: true
                             }
                         }
