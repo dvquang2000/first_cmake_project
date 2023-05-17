@@ -54,6 +54,7 @@ pipeline {
                 stage("Release") {
                     when { expression { params.RELEASE } }
                     steps {
+                        withEnv(["PATH+EXTRA=/usr/bin:/usr/sbin:/bin:/sbin"])
                         script {
                             // If operating system is macOS
                             if(os.equalsIgnoreCase("macOS")) {
