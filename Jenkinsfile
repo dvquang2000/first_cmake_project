@@ -6,10 +6,10 @@ pipeline {
     parameters {
         booleanParam(name: "RELEASE", defaultValue: false)
     }
-    environment {
-        OSTYPE = "linux-gnu"
-    }
-
+    // environment {
+    //     OSTYPE = "linux-gnu"
+    // }
+    OSTYPE = "hello"
     stages {
         stage("Init") {
             steps {
