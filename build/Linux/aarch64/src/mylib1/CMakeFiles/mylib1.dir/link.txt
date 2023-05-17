@@ -1,0 +1,2 @@
+/usr/bin/ar qc libmylib1.a  CMakeFiles/mylib1.dir/mylib1.cpp.o
+/usr/bin/ranlib libmylib1.a
