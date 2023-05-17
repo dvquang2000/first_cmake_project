@@ -6,7 +6,7 @@ pipeline {
     parameters {
         booleanParam(name: "RELEASE", defaultValue: false)
     }
-    environments {
+    environment {
         OSTYPE = "abc"
     }
 
