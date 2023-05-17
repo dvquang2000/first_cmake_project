@@ -1,6 +1,6 @@
 #!/bin/zsh
 
-echo $OSTYPE
+# echo $OSTYPE
 if [[ $OSTYPE == *"darwin"* ]]; then
     if [ ! -d build/macOS ]; then
     mkdir build/macOS
@@ -41,4 +41,5 @@ elif [[ $OSTYPE == *"linux-gnu"* ]]; then
     cmake --build .
 else
     echo "macOS ( 64-bit ) or Linux ( ARM-64 ) not detected. For windows platform, run build.bat file."
+    echo "$OSTYPE"
 fi
