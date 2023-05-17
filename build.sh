@@ -1,4 +1,6 @@
 #!/bin/zsh
+
+echo $OSTYPE
 if [[ $OSTYPE == *"darwin"* ]]; then
     if [ ! -d build/macOS ]; then
     mkdir build/macOS
@@ -23,7 +25,7 @@ elif [[ $OSTYPE == *"linux-gnu"* ]]; then
     fi
     # # As we are using vcpkg package manager, download and bootstrap it before using.
     # if [ ! -d vcpkg/vcpkg ]; then
-    # git clone https://github.com/microsoft/vcpkg.git
+    # git clone https://github.com/microsoft/vcpkg.git\ 
     # ./vcpkg/bootstrap-vcpkg.sh
     # fi
     # # To enable versioning support in vcpkg, this flag must be set before.
