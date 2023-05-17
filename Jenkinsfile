@@ -6,6 +6,9 @@ pipeline {
     parameters {
         booleanParam(name: "RELEASE", defaultValue: false)
     }
+    environments {
+        OSTYPE = "abc"
+    }
 
     stages {
         stage("Init") {
@@ -25,6 +28,7 @@ pipeline {
                     steps {
                         script {
                             if(os.equalsIgnoreCase("macOS")) {
+                            OSTYPE = "darwin"
                             sh 'chmod +x build.sh'
                             sh '. ./build.sh Debug'
                             archiveArtifacts artifacts: 'build/macOS/*', fingerprint: true
@@ -38,6 +42,7 @@ pipeline {
                                 archiveArtifacts artifacts: 'build/Windows/Win64/*', fingerprint: true
                             }   else {
                                 // Perform Linux related build task
+                            OSTYPE = "linux-gnu"
                             sh 'chmod +x build.sh'
                             sh '. ./build.sh Debug'
                             archiveArtifacts artifacts: 'build/Linux/aarch64/*', fingerprint: true
@@ -51,6 +56,7 @@ pipeline {
                         script {
                             // If operating system is macOS
                             if(os.equalsIgnoreCase("macOS")) {
+                            OSTYPE = "darwin"
                             sh 'chmod +x build.sh'
                             sh '. ./build.sh Release'
                             archiveArtifacts artifacts: 'build/macOS/*', fingerprint: true
@@ -64,6 +70,7 @@ pipeline {
                                 archiveArtifacts artifacts: 'build/Windows/Win64/*', fingerprint: true
                             }  else {
                                 // Perform Linux related build task
+                            OSTYPE = "linux-gnu"
                             sh 'chmod +x build.sh'
                             sh '. ./build.sh Release'
                             archiveArtifacts artifacts: 'build/Linux/aarch64/*', fingerprint: true
