@@ -25,7 +25,7 @@ pipeline {
                         script {
                             if(os.equalsIgnoreCase("macOS")) {
                             sh 'chmod +x build.sh'
-                            sh 'sh ./build.sh Debug'
+                            sh 'source build.sh Debug'
                             archiveArtifacts artifacts: 'build/macOS/*', fingerprint: true
                             }   else if(os.equalsIgnoreCase("Windows32")) {
                                 // Perform Windows related build task
@@ -38,7 +38,7 @@ pipeline {
                             }   else {
                                 // Perform Linux related build task
                             sh 'chmod +x build.sh'
-                            sh 'sh ./build.sh Debug'
+                            sh 'source build.sh Debug'
                             archiveArtifacts artifacts: 'build/Linux/aarch64/*', fingerprint: true
                             }
                         }
@@ -51,7 +51,7 @@ pipeline {
                             // If operating system is macOS
                             if(os.equalsIgnoreCase("macOS")) {
                             sh 'chmod +x build.sh'
-                            sh 'sh ./build.sh Release'
+                            sh 'source build.sh Release'
                             archiveArtifacts artifacts: 'build/macOS/*', fingerprint: true
                             }  else if(os.equalsIgnoreCase("Windows32")) {
                                 // Perform Windows-32Bit related build task
@@ -64,7 +64,7 @@ pipeline {
                             }  else {
                                 // Perform Linux related build task
                             sh 'chmod +x build.sh'
-                            sh 'sh ./build.sh Release'
+                            sh 'source build.sh Release'
                             archiveArtifacts artifacts: 'build/Linux/aarch64/*', fingerprint: true
                             }
                         }
@@ -79,14 +79,14 @@ pipeline {
                     // If operating system is macOS
                     if(os.equalsIgnoreCase("macOS")) {
                         sh 'chmod +x run.sh'
-                        sh ' source run.sh'
+                        sh '. ./run.sh'
                     } else if(os.equalsIgnoreCase("Windows32") || os.equalsIgnoreCase("Windows64")) {
                         // Perform Windows related test task
                         bat "run.bat"
                     } else {
                         // Perform Linux related test task
                         sh 'chmod +x run.sh'
-                        sh 'source run.sh'
+                        sh '. ./run.sh'
                     }
                 }
             }
