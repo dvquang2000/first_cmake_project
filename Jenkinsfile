@@ -38,7 +38,7 @@ pipeline {
                             }   else {
                                 // Perform Linux related build task
                             sh 'chmod +x build.sh'
-                            sh 'sh build.sh Debug'
+                            sh 'source build.sh Debug'
                             archiveArtifacts artifacts: 'build/Linux/aarch64/*', fingerprint: true
                             }
                         }
@@ -64,7 +64,7 @@ pipeline {
                             }  else {
                                 // Perform Linux related build task
                             sh 'chmod +x build.sh'
-                            sh 'sh build.sh Release'
+                            sh 'source build.sh Release'
                             archiveArtifacts artifacts: 'build/Linux/aarch64/*', fingerprint: true
                             }
                         }
