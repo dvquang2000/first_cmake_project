@@ -9,7 +9,7 @@ pipeline {
     // environment {
     //     OSTYPE = "linux-gnu"
     // }
-    OSTYPE = "hello"
+    // OSTYPE = "hello"
     stages {
         stage("Init") {
             steps {
