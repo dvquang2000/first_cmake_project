@@ -17,5 +17,5 @@ set(CMAKE_CROSS_COMPILING TRUE)
 # Here, we are using variable that we set earlier in build.sh file. Its temporary variable so doesnt pollute env variables.
 # We have appended vpckg toolchain at the end of our toolchain ( As per suggested by vcpkg docs )
 
-message(" Project Root Dir :-  $ENV{HELLOWORLD_ROOT_DIRECTORY}")
-include($ENV{HELLOWORLD_ROOT_DIRECTORY}/vcpkg/scripts/buildsystems/vcpkg.cmake)
+# message(" Project Root Dir :-  $ENV{HELLOWORLD_ROOT_DIRECTORY}")
+# include($ENV{HELLOWORLD_ROOT_DIRECTORY}/vcpkg/scripts/buildsystems/vcpkg.cmake)
