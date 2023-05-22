@@ -5,6 +5,7 @@ if [[ $OSTYPE == *"darwin"* ]]; then
 elif [[ $OSTYPE == *"linux-gnu"* ]]; then
     cd build/Linux/aarch64/app
     # Disable running executable until Headless rendering is set up.
+    file execuatable
     ./execuatable
 else
     echo "macOS ( 64-bit ) or Linux ( ARM-64 ) not detected. For windows platform, use run.bat file."
