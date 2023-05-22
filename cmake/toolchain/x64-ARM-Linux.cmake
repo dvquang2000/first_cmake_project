@@ -4,7 +4,7 @@ set(CMAKE_SYSTEM_PROCESSOR aarch64)
 set(TOOLCHAIN_PATH /usr/bin)
 set(TOOLCHAIN_PREFIX aarch64-linux-gnu)
 set(CMAKE_CXX_STANDARD 17)
-
+message("Jump to set CMake Compiler")
 set(CMAKE_C_COMPILER     "${TOOLCHAIN_PATH}/aarch64-linux-gnu-gcc-9")
 set(CMAKE_CXX_COMPILER   "${TOOLCHAIN_PATH}/aarch64-linux-gnu-g++-9")
 # message(${CMAKE_CXX_COMPILER})
