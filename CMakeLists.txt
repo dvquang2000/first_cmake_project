@@ -15,4 +15,5 @@ add_test(all_tests first_tests)
 
 include(CMakePrintHelpers)
 
-cmake_print_variables(CMAKE_CXX_COMPILER_ID CMAKE_CXX_COMPILER_VERSION CMAKE_CXX_COMPILER)
+message("CMAKE_CXX_COMPILER = " ${CMAKE_CXX_COMPILER})
+# cmake_print_variables(CMAKE_CXX_COMPILER_ID CMAKE_CXX_COMPILER_VERSION CMAKE_CXX_COMPILER)
