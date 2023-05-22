@@ -12,3 +12,7 @@ target_link_libraries(first_tests
 )
 
 add_test(all_tests first_tests)
+
+include(CMakePrintHelpers)
+
+cmake_print_variables(CMAKE_CXX_COMPILER_ID CMAKE_CXX_COMPILER_VERSION CMAKE_CXX_COMPILER)

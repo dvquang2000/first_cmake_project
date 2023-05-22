@@ -73,6 +73,7 @@ pipeline {
                             $OSTYPE = "linux-gnu"
                             sh 'chmod +x build.sh'
                             sh './build.sh Release'
+                            
                             archiveArtifacts artifacts: 'build/Linux/aarch64/*', fingerprint: true
                             }
                         }
