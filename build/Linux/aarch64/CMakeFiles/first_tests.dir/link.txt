@@ -1,1 +1,0 @@
-/usr/bin//aarch64-linux-gnu-g++     CMakeFiles/first_tests.dir/unit_tests.cpp.o  -o first_tests  src/mylib1/libmylib1.a src/mylib2/libmylib2.a /usr/aarch64-linux-gnu/local/lib/libgtest.a -lpthread 
