@@ -38,6 +38,7 @@ elif [[ "$OSTYPE" == *"linux-gnu"* ]]; then
     # export VCPKG_FORCE_SYSTEM_BINARIES=1
     cmake -B build/Linux/aarch64 -DCMAKE_BUILD_TYPE=$1 -DCMAKE_TOOLCHAIN_FILE=cmake/toolchain/x64-ARM-Linux.cmake
     echo "$CMAKE_CXX_COMPILER"
+    echo "hello"
     cd build/Linux/aarch64
     cmake --build .
 else
