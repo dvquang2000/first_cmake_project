@@ -36,7 +36,7 @@ elif [[ "$OSTYPE" == *"linux-gnu"* ]]; then
     # export VCPKG_TARGET_TRIPLET=arm64-linux
     # # Environment variable VCPKG_FORCE_SYSTEM_BINARIES must be set on ARM and s390x platforms.
     # export VCPKG_FORCE_SYSTEM_BINARIES=1
-    make clean
+    # make clean
     cmake -B build/Linux/aarch64 -DCMAKE_BUILD_TYPE=$1 -DCMAKE_TOOLCHAIN_FILE=cmake/toolchain/x64-ARM-Linux.cmake
     # cmake -B build/Linux/aarch64 -DCMAKE_BUILD_TYPE=$1 
     # echo "$CMAKE_CXX_COMPILER"
