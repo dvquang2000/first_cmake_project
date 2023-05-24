@@ -1,0 +1,16 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/qdt-02/workspace/quangdv/first_cmake_project/src/mylib2/mylib2.cpp
+iostream
+-
+mylib2.h
+/home/qdt-02/workspace/quangdv/first_cmake_project/src/mylib2/mylib2.h
+
+/home/qdt-02/workspace/quangdv/first_cmake_project/src/mylib2/mylib2.h
+

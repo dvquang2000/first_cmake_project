@@ -1,6 +1,7 @@
 cmake_minimum_required(VERSION 3.10.0)
 project(first_project)
 find_package(GTest REQUIRED)
+set(CMAKE_TOOLCHAIN_FILE "./cmake/toolchain/x64-ARM-Linux.cmake")
 add_subdirectory(src)
 add_subdirectory(app)
 enable_testing()
