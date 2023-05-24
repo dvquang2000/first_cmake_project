@@ -1,2 +1,0 @@
-/usr/bin/aarch64-linux-gnu-ar qc libmylib2.a  CMakeFiles/mylib2.dir/mylib2.cpp.o
-/usr/bin/aarch64-linux-gnu-ranlib libmylib2.a
