@@ -45,7 +45,7 @@ pipeline {
                             $OSTYPE = "linux-gnu"
                             sh 'chmod +x build.sh'
                             sh './build.sh Debug'
-                            archiveArtifacts artifacts: 'build/Linux/aarch64/*', fingerprint: true
+                            archiveArtifacts artifacts: 'build/Linux/aarch64/app/*', fingerprint: true
                             }
                         }
                     }
@@ -75,7 +75,7 @@ pipeline {
                             // sh './build.sh Release'
                             sh './build.sh '
 
-                            archiveArtifacts artifacts: 'build/Linux/aarch64/*', fingerprint: true
+                            archiveArtifacts artifacts: 'build/Linux/aarch64/app/*', fingerprint: true
                             }
                         }
                     }
